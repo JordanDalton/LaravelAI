@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Http;
 
-it('should create message using anthropic driver', function(){
+it('should create message using anthropic driver', function () {
 
     $response = getFixtureAsArray('Anthropic/Messages.Create.Simple.json');
 
     Http::fake([
-        '*' => Http::response($response)
+        '*' => Http::response($response),
     ]);
 
     $response = app('ai')->driver('anthropic')->createMessage();

@@ -14,7 +14,7 @@ return [
                 'max_tokens' => env('ANTHROPIC_MAX_TOKENS', 1000),
                 'temperature' => env('ANTHROPIC_TEMPERATURE', 0.7),
             ],
-        ]
+        ],
     ],
 
     'providers' => [
@@ -27,6 +27,6 @@ return [
         'openai' => [
             'driver' => 'openai',
             'base_url' => env('OPENAI_BASE_URL', 'https://api.openai.com/v1'),
-        ]
-    ]
+        ],
+    ],
 ];

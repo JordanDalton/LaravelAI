@@ -2,6 +2,4 @@
 
 namespace JordanDalton\LaravelAI\AiProviders\Anthropic\Responses;
 
-interface AnthropicResponse
-{
-}
+interface AnthropicResponse {}

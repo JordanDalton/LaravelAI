@@ -7,10 +7,7 @@ use JordanDalton\LaravelAI\AiProviders\Anthropic\Responses\CreateMessageResponse
 
 class CreateMessage
 {
-    public function __construct(public AnthropicDriver $driver, public array $payload = [])
-    {
-
-    }
+    public function __construct(public AnthropicDriver $driver, public array $payload = []) {}
 
     public static function make(AnthropicDriver $driver, array $payload = []): CreateMessage
     {
@@ -26,7 +23,7 @@ class CreateMessage
     {
         $default = data_get($this->driver->llm, 'model');
 
-        return $this->value( 'model', $default);
+        return $this->value('model', $default);
     }
 
     public function value($key, $default = null)
@@ -51,7 +48,7 @@ class CreateMessage
 
     public function system(): ?string
     {
-        return $this->value( 'system');
+        return $this->value('system');
     }
 
     public function stream(): bool
@@ -61,7 +58,7 @@ class CreateMessage
 
     public function messages(): array
     {
-        return $this->value( 'messages', []);
+        return $this->value('messages', []);
     }
 
     public function payload(): array
@@ -75,7 +72,7 @@ class CreateMessage
             'model' => $this->model(),
             'max_tokens' => $this->maxTokens(),
             'temperature' => $this->temperature(),
-            'messages' => $this->messages()
+            'messages' => $this->messages(),
         ];
 
         return $required + $optional;

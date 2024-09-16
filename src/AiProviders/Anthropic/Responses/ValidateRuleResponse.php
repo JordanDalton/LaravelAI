@@ -2,7 +2,6 @@
 
 namespace JordanDalton\LaravelAI\AiProviders\Anthropic\Responses;
 
-
 class ValidateRuleResponse extends CreateMessageResponse
 {
     public function decoded()

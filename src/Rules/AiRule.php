@@ -24,8 +24,7 @@ class AiRule implements ValidationRule
     {
         $validation = $this->driver->validateInput($value, $this->prompt);
 
-        if($validation->failed())
-        {
+        if ($validation->failed()) {
             $fail(":attribute: {$validation->errorMessage()}");
         }
     }

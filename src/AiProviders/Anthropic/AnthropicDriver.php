@@ -11,10 +11,7 @@ use JordanDalton\LaravelAI\AiProviders\Anthropic\Responses\ValidateRuleResponse;
 
 class AnthropicDriver
 {
-    public function __construct(public array $llm, public array $provider)
-    {
-
-    }
+    public function __construct(public array $llm, public array $provider) {}
 
     public static function make(array $llm, array $provider)
     {
@@ -34,8 +31,8 @@ class AnthropicDriver
     public function client(): PendingRequest
     {
         return Http::acceptJson()->withHeaders([
-            'x-api-key'         => $this->apiKey(),
-            'anthropic-version' => $this->apiVersion()
+            'x-api-key' => $this->apiKey(),
+            'anthropic-version' => $this->apiVersion(),
         ]);
     }
 

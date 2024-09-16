@@ -14,7 +14,7 @@ class AiManager extends Manager
 
     public function createAnthropicDriver(): AnthropicDriver
     {
-        $llm      = $this->config->get('ai.llms.claude');
+        $llm = $this->config->get('ai.llms.claude');
         $provider = $this->config->get('ai.providers.anthropic');
 
         return new AnthropicDriver($llm, $provider);

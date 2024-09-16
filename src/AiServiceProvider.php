@@ -2,15 +2,15 @@
 
 namespace JordanDalton\LaravelAI;
 
+use JordanDalton\LaravelAI\Commands\SkeletonCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use JordanDalton\LaravelAI\Commands\SkeletonCommand;
 
 class AiServiceProvider extends PackageServiceProvider
 {
     public function boot()
     {
-        $this->app->singleton('ai', fn($app) => new AiManager($app));
+        $this->app->singleton('ai', fn ($app) => new AiManager($app));
     }
 
     public function configurePackage(Package $package): void
