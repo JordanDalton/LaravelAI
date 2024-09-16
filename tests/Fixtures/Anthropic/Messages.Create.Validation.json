@@ -1,0 +1,18 @@
+{
+    "id": "msg_9876543210",
+    "type": "message",
+    "role": "assistant",
+    "model": "claude-3-5-sonnet-20240620",
+    "content": [
+        {
+            "type": "text",
+            "text": "{\n  \"valid\": false,\n  \"message\": \"The input contains the word 'Laravel' as required.\"\n}"
+        }
+    ],
+    "stop_reason": "end_turn",
+    "stop_sequence": null,
+    "usage": {
+        "input_tokens": 100,
+        "output_tokens": 31
+    }
+}

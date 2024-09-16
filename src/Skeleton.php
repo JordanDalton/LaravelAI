@@ -1,5 +1,5 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace JordanDalton\LaravelAI;
 
 class Skeleton {}

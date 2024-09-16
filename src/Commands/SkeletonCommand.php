@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace JordanDalton\LaravelAI\Commands;
 
 use Illuminate\Console\Command;
 

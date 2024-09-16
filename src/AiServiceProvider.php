@@ -1,13 +1,18 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace JordanDalton\LaravelAI;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use JordanDalton\LaravelAI\Commands\SkeletonCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class AiServiceProvider extends PackageServiceProvider
 {
+    public function boot()
+    {
+        $this->app->singleton('ai', fn($app) => new AiManager($app));
+    }
+
     public function configurePackage(Package $package): void
     {
         /*
@@ -16,7 +21,7 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('ai')
             ->hasConfigFile()
             ->hasViews()
             ->hasMigration('create_migration_table_name_table')
